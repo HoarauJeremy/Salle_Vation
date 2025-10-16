@@ -21,9 +21,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: install front dependencies
-        run: |
-          cd ./frontend/salle-vation-front/ | npm i
+      # - name: install front dependencies
+      #   run: |
+      #     cd ./frontend/salle-vation-front/ | npm i
       - name: install back dependencies
         run: |
           cd ./backend/salle_vation/ | composer i
