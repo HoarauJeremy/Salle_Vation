@@ -1,10 +1,12 @@
 name: Docker Image CI
 
-on:
+on: 
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  
+  
 
 jobs:
 
@@ -27,3 +29,18 @@ jobs:
       - name: install back dependencies
         run: |
           cd ./backend/salle_vation/ | composer i
+
+  release:
+    name: Release pushed tag
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+        run:
+          gh release create "$tag" \
+            --repo="$GITHUB_REPOSITORY" \
+            --generate-notes
+            
+    
