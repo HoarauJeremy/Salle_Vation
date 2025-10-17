@@ -31,6 +31,25 @@ description when links are shared are language-appropriate
 - Trademark sign previously shown after the project description in version 
 0.3.0
 
+## [1.1.2] - 2025-10-17
+
+### Added
+
+- none
+
+### Fixed
+
+- none
+
+### Changed
+
+- Update de la page d'accueil
+- modification du docker-image
+
+### Removed
+
+- none
+
 ## [1.1.1] - 2023-03-05
 
 ### Added
